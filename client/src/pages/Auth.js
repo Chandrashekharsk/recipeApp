@@ -21,6 +21,7 @@ export const Register = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault();
     try {
+      console.log("username info:"+username+" "+password);
       await axios.post("http://localhost:8080/auth/register",
         {
           username,
