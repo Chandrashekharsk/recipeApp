@@ -1,10 +1,11 @@
 import { UserModel } from "../models/users.js";
 import dotenv from "dotenv"
-dotenv.config()
+dotenv.config();
 import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt"
 
 const registerUser = async(req,res)=>{
+  console.log("register start")
   let {username,password} = req.body
   // username = username.trim() 
   // password = password.trim()
