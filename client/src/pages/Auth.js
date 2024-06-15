@@ -22,7 +22,7 @@ export const Register = () => {
     e.preventDefault();
     try {
       console.log("username info:"+username+" "+password);
-      await axios.post("http://localhost:8080/auth/register",
+      await axios.post("https://recipe-app-nine-chi.vercel.app/auth/register",
         {
           username,
           password
@@ -66,7 +66,7 @@ export const Login = () => {
   const handleSubmit = async(e)=>{
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/auth/login",
+      await axios.post("https://recipe-app-nine-chi.vercel.app/auth/login",
         {username, password}
       )
       .then((res)=>{

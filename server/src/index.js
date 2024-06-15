@@ -7,7 +7,13 @@ import { recipesRouter } from "./routes/recipes.js";
 
 connectDB()
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://recipe-app1-five.vercel.app/auth"],
+    methods:["POST","GET"],
+    credentials:true,
+  }
+));
 app.use("/auth",userRouter)
 app.use("/recipes",recipesRouter)
 

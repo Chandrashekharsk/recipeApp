@@ -11,7 +11,7 @@ export const Home = () => {
 
   const fetchRecipe = async()=>{
     try {
-      const response = await axios.get("http://localhost:8080/recipes")
+      const response = await axios.get("https://recipe-app-nine-chi.vercel.app/recipes")
       setRecipes(response.data)
     } catch (error) {
       console.error(error)
@@ -20,7 +20,7 @@ export const Home = () => {
 
   const savedRec = async()=>{
     try {
-      const res = await axios.get(`http://localhost:8080/recipes/savedrecipes/${userID}`,{
+      const res = await axios.get(`https://recipe-app-nine-chi.vercel.app/recipes/savedrecipes/${userID}`,{
         headers:{authorization:cookies.access_token}
       })
       console.log("res",res)

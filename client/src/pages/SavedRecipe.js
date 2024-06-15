@@ -12,7 +12,7 @@ export const SavedRecipe = () => {
 
   const getRecipes = async()=>{
     try{
-      const res = await axios.get(`http://localhost:8080/recipes/savedrecipes/${userID}`,
+      const res = await axios.get(`https://recipe-app-nine-chi.vercel.app/recipes/savedrecipes/${userID}`,
       {
         headers: {authorization:cookies.access_token}
       })

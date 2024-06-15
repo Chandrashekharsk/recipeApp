@@ -40,7 +40,7 @@ export const CreateRecipe = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8080/recipes",
+      await axios.post("https://recipe-app-nine-chi.vercel.app/recipes",
       recipe,
       {
         headers:{authorization:cookies.access_token}
